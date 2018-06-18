@@ -146,16 +146,21 @@ size = 87
 # speed = 1 -> slowest - bigger animation delay for the turtle
 # speed = 10 -> fastest - smaller animation delay for the turtle
 # speed = 0 -> max speed - no animation delay for the turtle
-speed = 10
+speed = 3
 
 # up to which level we like to draw
-max_level = 5
+max_level = 4
 
 # do we need solid color triangles as well?
 draw_trinangle_enabled = False
 
 # just fun with colors.
 level_colors = ["red", "green", "blue", "cyan", "pink", "brown"]
+
+window = turtle.Screen()
+window.setup(width=800, height=800)
+window.screensize(2000, 2000)
+
 
 happy_turtle.speed(speed)
 penup()
@@ -188,6 +193,5 @@ else:
     print ("Drawing took %f seconds." % (elapsed_time))
 
 # keep the turtle window open, until someone hits enter.
-raw_input("Hit enter for end")
-
+window.exitonclick()
 
